@@ -1,0 +1,588 @@
+/***** Estilos Globales *****/
+:root {
+    --text-color: #666666;
+    --text-light: #afafaf;
+    --hover-link: #2772cc;
+    --red-btn: #ef3942;
+    --bg-tabs: #f1f1f1;
+    --bg-footer: #37474f;
+    --bg-foot: #2d3a40;
+    --green: #28892b;
+    --yellow: #e9ef39;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/***** Estilos Header *****/
+.header {
+    width: 100%;
+    max-width: 1200px;
+    height: 56px;
+    padding: 0 7.563rem;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    z-index: 20;
+}
+
+.logotipo {
+    margin-top: -.3rem;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu,
+.nav-menu-item {
+    display: flex;
+}
+
+.nav-menu {
+    margin-top: .85rem;
+}
+
+.nav-menu-item span {
+    margin: 0 .64rem;
+}
+
+.nav-menu-item-link {
+    font-size: 1.125rem;
+    font-weight: 200;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+}
+
+.nav-menu-item-link:active {
+    color: var(--hover-link);
+}
+
+.nav-menu-item-active::before {
+    width: 100%;
+    height: 7px;
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1rem;
+    background-color: var(--hover-link);
+    transition: 0.3s;
+}
+
+.hover-link::after {
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    left: 0px;
+    bottom: -1rem;
+    background-color: var(--hover-link);
+    content: "";
+    transform: scaleX(0);
+    transition: transform 0.3s ease 0s;
+}
+
+.hover-link:hover::after {
+    transform: scaleX(1);
+}
+
+.menu_mobile {
+    width: 35px;
+    height: 27px;
+    display: none;
+    background-image: url(./assets/images/burguer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+/***** Estilos Carousel *****/
+.container-xxl {
+    max-width: 1200px !important;
+}
+
+.carousel-indicators {
+    bottom: -5px !important;
+}
+
+.carousel-indicators button {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 20px 4px 0 !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators button.active {
+    background-color: #2772cc;
+}
+
+.carousel-caption {
+    height: auto;
+    left: 7.563rem !important;
+    top: 18%;
+    text-align: left !important;
+}
+
+.carousel-caption h1 {
+    font-weight: 600;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+
+.btn-carousel {
+    width: 188px;
+    height: 48px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: var(--white) !important;
+    background-color: var(--red-btn) !important;
+    border-radius: 1rem !important;
+}
+
+/***** Estilos Modal Text *****/
+.txt-mod-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 7.563rem !important;
+}
+
+.txt-mod-left {
+    width: 100%;
+    min-width: 415px;
+    max-height: 190px;
+    display: flex;
+    border-left: 1rem solid var(--red-btn);
+}
+
+.txt-mod-title {
+    margin-top: -.8rem;
+    font-weight: 600;
+    line-height: 4.5rem !important;
+    color: var(--text-color);
+}
+
+.txt-mod-parag {
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+
+.txt-mod-parag:nth-child(2) {
+    margin-top: 1.8rem;
+}
+
+/***** Estilos Carousel Cards *****/
+.swiper {
+    width: 90%;
+    max-width: 1080px;
+    height: 500px;
+}
+
+.swiper-wrapper {
+    height: 450px !important;
+    display: flex;
+    align-items: flex-start;
+}
+
+.swiper-slide {
+    width: 100% !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-color) !important;
+    opacity: .8;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: -.5rem;
+}
+
+.swiper-pagination-bullet {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50%;
+}
+
+.card-body {
+    color: var(--text-color) !important;
+}
+.card-text {
+    font-size: 0.85rem;
+    font-weight: 200;
+}
+
+.btn-tag {
+    width: 70px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--hover-link);
+}
+
+.btn-card {
+    width: 130px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 38px;
+    background-color: var(--red-btn);
+    text-decoration: none;
+}
+
+/***** Estilos Tabs  *****/
+.tabs-wrapper {
+    width: 100%;
+    max-width: 1200px !important;
+    padding: 0 7.563rem !important;
+}
+
+.tabs-title {
+    font-size: 2.75rem !important;
+    font-weight: 600 !important;
+    color: var(--text-color) !important;
+}
+.tabs-text {
+    max-width: 480px;
+    font-size: 1.375rem;
+    font-weight: 200;
+    line-height: 1.8rem;
+    color: var(--text-color) !important;
+}
+
+.nav {
+    height: auto;
+}
+
+.nav.nav-tabs {
+    justify-content: flex-start;
+    border: none;
+}
+
+.nav-item {
+    width: 147px;
+    text-align: center;
+}
+
+.nav-item .nav-link {
+    font-weight: 200;
+    color: var(--text-light);
+    border-top-right-radius: 2.5rem !important;
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    isolation: unset !important;
+  }
+
+.nav-link.active {
+    color: var(--text-color);
+    background-color: var(--bg-tabs) !important;
+    box-shadow: none;
+}
+
+.tab-pane {
+    background-color: var(--bg-tabs) !important;
+}
+
+.tab-pane {
+    padding: 2rem 0;
+}
+
+.tab-pane.active {
+    display: flex !important;
+    align-items: center;
+}
+
+.tab-pane .colors {
+    width: fit-content;
+}
+
+.tab-pane .colors>div {
+    width: 25px;
+    height: 31px;
+}
+
+.tab-pane .colors .green {
+    background-color: var(--green);
+}
+
+.tab-pane .colors .red {
+    background-color: var(--red-btn);
+}
+
+.tab-pane .colors .blue {
+    background-color: var(--hover-link);
+}
+
+.tab-pane .colors .yellow {
+    background-color: var(--yellow);
+}
+
+.tab-pane h2 {
+    width: fit-content;
+    min-width: 400px;
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.tab-text {
+    max-width: 365px;
+    font-size: 1.375rem;
+    margin: 0;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+/***** Estilos Footer *****/
+.footer {
+    width: 100%;
+    height: 265px;
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .75rem;
+    font-weight: 200;
+    background-color: var(--bg-footer);
+}
+
+.footer .col {
+    height: 100px;
+}
+
+.footer .col:nth-child(1) {
+    border-right: 1px solid var(--white);
+}
+
+.footer .col:nth-child(3) {
+    border-left: 1px solid var(--white);
+}
+
+.footer .col p {
+    max-width: 190px;
+}
+
+.foot {
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: var(--bg-foot);
+}
+
+/***** Media Query *****/
+@media screen and (max-width: 1080px) {
+    .header {
+        max-width: none;
+        padding: 0 2rem;
+    }
+
+    .tabs-wrapper {
+        max-width: none;
+        padding: 0 2rem !important;
+    }
+    
+    .tab-pane h2 {
+        min-width: none;
+    }
+
+    .carousel-caption {
+        left: 5rem !important;
+        top: 8%;
+        text-align: left !important;
+    }
+
+    .txt-mod-wrapper {
+        max-width: none;
+        padding: 0 5rem !important;
+    }
+
+    .txt-mod-left {
+        width: fit-content !important;
+        min-width: 0;
+        max-height: 170px;
+    }
+
+    .txt-mod-title {
+        font-size: calc(1rem + 2.7vw) !important;
+        line-height: 4rem !important;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+    .container-xxl {
+        min-height: 260px !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: calc(1.1rem + 1.5vw);
+        font-weight: 600;
+    }
+
+    .carousel-caption p {
+        font-size: 1remx;
+        font-weight: 200;
+        line-height: 1.5rem;
+    }
+
+    .btn-carousel {
+        width: 140px;
+        height: 36px;
+        font-size: 1rem !important;
+        border-radius: 36px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu-item-active::before {
+        width: 0;
+        height: 0;
+    }
+
+    .menu_mobile {
+        width: 35px;
+        height: 27px;
+        display: block;
+        position: relative;
+        background-image: url(./assets/images/burguer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all .22s ease-in-out;
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: 500px;
+        padding: 6rem 0 0 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: -55rem;
+        left: 0;
+        background-color: var(--bg-footer);
+    }
+
+    .nav-menu-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu-item-link {
+        width: 100%;
+        padding: 1rem 0;
+        color: var(--white);
+    }
+
+    .hover-link::after {
+        width: 0;
+        height: 0;
+    }
+
+    .hover-link:hover {
+        background-color: #ffffff42;
+    }
+
+    .nav-menu span {
+        display: none;
+    }
+
+    .show_menu {
+        top: 0;
+        z-index: -1;
+    }
+
+    .close_menu {
+        width: 35px;
+        height: 27px;
+        background-image: url(./assets/images/icon-close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+
+    .txt-mod-left {
+        width: 100%;
+        min-width: 0;
+        max-height: 190px;
+        display: flex;
+        border: none;
+    }
+
+    .txt-mod-title {
+        text-align: center;
+        line-height: 3rem !important;
+    }
+
+    .txt-mod-title br:first-of-type {
+        display: none;
+    }
+
+    .txt-mod-parag {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
